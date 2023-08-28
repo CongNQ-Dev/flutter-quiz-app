@@ -16,7 +16,14 @@ class StartScreen extends StatelessWidget {
           child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset("assets/images/quiz-logo.png", width: 300),
+          Image.asset(
+            "assets/images/quiz-logo.png",
+            width: 300,
+            color: const Color.fromARGB(150, 255, 255, 255),
+          ),
+          // Opacity(
+          //     opacity: 0.6,
+          //     child: Image.asset("assets/images/quiz-logo.png", width: 300)),
           const SizedBox(height: 80),
           const Text(
             "Learn Flutter the fun way!",
@@ -34,7 +41,7 @@ class StartScreen extends StatelessWidget {
                 side: const BorderSide(
                     color: Colors.black, width: 0.1), // Thêm viền đen
               ),
-              icon: const Icon(Icons.start),
+              icon: const Icon(Icons.arrow_right_alt),
               label: const Text(
                 "Start Quiz",
                 style: TextStyle(
