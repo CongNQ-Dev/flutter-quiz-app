@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'backgound-container.dart';
+import 'start_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.purple[800],
-        body: BackgroundContainer(),
+        body: StartScreen([
+          const Color.fromARGB(255, 132, 43, 100),
+          const Color.fromARGB(255, 132, 43, 200),
+        ]),
       ),
     );
   }
