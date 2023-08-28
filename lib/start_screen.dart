@@ -1,16 +1,16 @@
 import "package:flutter/material.dart";
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.colors, {super.key});
-  final List<Color> colors;
+  const StartScreen(this.startQuiz, {super.key});
+  final void Function() startQuiz;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: colors,
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight),
+        gradient: LinearGradient(colors: [
+          const Color.fromARGB(255, 132, 43, 100),
+          const Color.fromARGB(255, 132, 43, 200),
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight),
       ),
       child: Center(
           child: Column(
@@ -32,7 +32,9 @@ class StartScreen extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                startQuiz();
+              },
               style: ElevatedButton.styleFrom(
                 primary: Colors
                     .transparent, // Set the foreground color to transparent
