@@ -3,8 +3,8 @@ class QuizQuestion {
   final List<String> _answers;
   const QuizQuestion(this.text, this._answers);
   List getShuffledAnswers() {
-    List suffledList = List.of(_answers);
-    suffledList.shuffle();
-    return suffledList;
+    List shuffledList = List.of(_answers);
+    shuffledList.shuffle();
+    return shuffledList;
   }
 }
