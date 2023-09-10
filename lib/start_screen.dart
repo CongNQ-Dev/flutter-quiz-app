@@ -6,12 +6,12 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          const Color.fromARGB(255, 132, 43, 100),
-          const Color.fromARGB(255, 132, 43, 200),
-        ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-      ),
+      // decoration: BoxDecoration(
+      //   gradient: LinearGradient(colors: [
+      //     Color.fromARGB(255, 33, 201, 21),
+      //     const Color.fromARGB(255, 132, 43, 200),
+      //   ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+      // ),
       child: Center(
           child: Column(
         mainAxisSize: MainAxisSize.min,

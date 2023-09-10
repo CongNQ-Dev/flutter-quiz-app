@@ -38,6 +38,7 @@ class _QuizState extends State<Quiz> {
       screenWidget = const QuestionsScreen();
     }
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           decoration: BoxDecoration(
