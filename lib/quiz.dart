@@ -23,6 +23,7 @@ class _QuizState extends State<Quiz> {
   //     activeScreen = const QuestionsScreen();
   //   });
   // }
+  List<String> selectedAnswer = [];
   //solution 2
   var activeScreen = "start-screen";
   void switchScreen() {
@@ -31,11 +32,19 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void chooseAnswer(String answer) {
+    setState(() {
+      selectedAnswer.add(answer);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget screenWidget = StartScreen(switchScreen);
     if (activeScreen == "question-screen") {
-      screenWidget = const QuestionsScreen();
+      screenWidget = QuestionsScreen(
+        onSelectAnswer: chooseAnswer,
+      );
     }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -49,7 +58,9 @@ class _QuizState extends State<Quiz> {
           ),
           child: activeScreen == "start-screen"
               ? StartScreen(switchScreen)
-              : const QuestionsScreen(),
+              : QuestionsScreen(
+                  onSelectAnswer: chooseAnswer,
+                ),
         ),
       ),
     );
