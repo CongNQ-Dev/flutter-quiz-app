@@ -1,6 +1,6 @@
 # quiz
 
-A new Flutter project.
+A basic quiz Flutter project.
 
 ## Getting Started
 
