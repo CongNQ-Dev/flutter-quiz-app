@@ -4,7 +4,8 @@ import 'package:quiz/questions_summary/questions_summary.dart';
 import '../data/questions.dart';
 
 class ResultScreen extends StatelessWidget {
-  ResultScreen(this.onRestartAnswer, {super.key, required this.chosenAnswer});
+  ResultScreen(
+      {super.key, required this.chosenAnswer, required this.onRestartAnswer});
   final void Function() onRestartAnswer;
 
   List<String> chosenAnswer;
@@ -56,7 +57,7 @@ class ResultScreen extends StatelessWidget {
               onPressed: onRestartAnswer,
               style: TextButton.styleFrom(foregroundColor: Colors.white),
               icon: const Icon(Icons.refresh),
-              label: const Text("Restar Quiz!"),
+              label: const Text("Restart Quiz!"),
             )
           ],
         ),

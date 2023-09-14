@@ -60,7 +60,7 @@ class _QuizState extends State<Quiz> {
       );
     } else if (activeScreen == "result-screen") {
       screenWidget = ResultScreen(
-        restartAnswer,
+        onRestartAnswer: restartAnswer,
         chosenAnswer: selectedAnswer,
       );
     }
